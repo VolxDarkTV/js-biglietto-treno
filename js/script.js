@@ -10,19 +10,29 @@ let howOldAreYou = parseInt(prompt("Adesso, Gentilmente mi dica anche la sua eta
     let moltiplication = howLong * priceForKm;
     // IF minorenni => -20%
     if(howOldAreYou < 18){
+
         moltiplication = (howLong * priceForKm)*0.80;
         // arrotondare per 2 DECIMALI
         moltiplication = moltiplication.toFixed(2);
+        // OUTPUT
+        document.getElementById("title").innerHTML = `Grazie infinite per aver scelto la nostra compagnia! Lei ha ${howOldAreYou} anni, e vuole percorrere ${howLong}km, il prezzo da noi accuratamente valutato, e scontato del 20%, per lei e: ${moltiplication}€`
+
     }else if(howOldAreYou > 65){ // ELSE IF over 65 => -40%
+
         moltiplication = (howLong * priceForKm)*0.60;
         moltiplication = moltiplication.toFixed(2);
+        // OPUTPUT
+        document.getElementById("title").innerHTML = `Grazie infinite per aver scelto la nostra compagnia! Lei ha ${howOldAreYou} anni, e vuole percorrere ${howLong}km, il prezzo da noi accuratamente valutato, e scontato del 40%, per lei e: ${moltiplication}€`
     }else{ // ELSE full price
+
         howLong * priceForKm;
+        document.getElementById("title").innerHTML = `Grazie infinite per aver scelto la nostra compagnia! Lei ha ${howOldAreYou} anni, e vuole percorrere ${howLong}km, il prezzo da noi accuratamente valutato per lei e: ${moltiplication}€`
+
     } 
 
 
 // Final Price
-document.getElementById("title").innerHTML = `Grazie infinite per aver scelto la nostra compagnia! Lei ha ${howOldAreYou} anni, e vuole percorrere ${howLong}km, il prezzo da noi accuratamente valutato per lei e: ${moltiplication}€`
+// document.getElementById("title").innerHTML = `Grazie infinite per aver scelto la nostra compagnia! Lei ha ${howOldAreYou} anni, e vuole percorrere ${howLong}km, il prezzo da noi accuratamente valutato per lei e: ${moltiplication}€`
 
     
 // DEBUG
