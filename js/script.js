@@ -13,16 +13,16 @@ let howOldAreYou = parseInt(prompt("Adesso, Gentilmente mi dica anche la sua eta
         moltiplication = (howLong * priceForKm)*0.80;
         // arrotondare per 2 DECIMALI
         moltiplication = moltiplication.toFixed(2);
-    }else if(howOldAreYou > 65){// ELSE IF over 65 => -40%
+    }else if(howOldAreYou > 65){ // ELSE IF over 65 => -40%
         moltiplication = (howLong * priceForKm)*0.60;
         moltiplication = moltiplication.toFixed(2);
-    }else{// ELSE full price
+    }else{ // ELSE full price
         howLong * priceForKm;
     } 
-    
+
 
 // Final Price
-
+document.getElementById("title").innerHTML = `Grazie infinite per aver scelto la nostra compagnia! Lei ha ${howOldAreYou} anni, e vuole percorrere ${howLong}km, il prezzo da noi accuratamente valutato per lei e: ${moltiplication}€`
 
     
 // DEBUG
